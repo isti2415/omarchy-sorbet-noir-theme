@@ -1,0 +1,43 @@
+# Sorbet Noir — full-spectrum pastels on true AMOLED black.
+# Accent: mint/aqua. Active border: pastel rainbow sweep.
+
+mode = "dark"
+
+# --- Identity -----------------------------------------------------------
+accent    = "#a8f0dc"   # mint — borders, selections, active bar items
+selection = "#1c3b35"   # dark mint wash behind selected text
+muted     = "#7d8b99"   # dim UI text / ANSI bright-black — lifted for legibility on black
+
+# --- Surfaces (AMOLED: the base three are literally off-pixels) ---------
+background        = "#000000"
+dark_background   = "#000000"
+darker_background = "#000000"
+lighter_background = "#14141b"   # faintest lift for elevated surfaces
+
+# --- Text ---------------------------------------------------------------
+foreground        = "#e9e9ef"
+dark_foreground   = "#8a95a6"   # comments, disabled — lifted for legibility
+light_foreground  = "#c9c9d6"
+bright_foreground = "#ffffff"
+
+# --- Full-spectrum pastels (balanced saturation) ------------------------
+red     = "#ff9aa9"   # rose
+orange  = "#ffbd94"   # peach
+yellow  = "#ffeaa0"   # butter
+green   = "#aeeda4"   # spring
+cyan    = "#9ce8de"   # aqua
+blue    = "#a2c4ff"   # sky
+magenta = "#dcaaff"   # lilac
+brown   = "#c2a48f"   # pastel taupe
+
+bright_red     = "#ffb6c2"
+bright_yellow  = "#fff3c0"
+bright_green   = "#c6f2be"
+bright_cyan    = "#bbf1ea"
+bright_blue    = "#bed6ff"
+bright_magenta = "#e9c6ff"
+
+# --- Hyprland borders ---------------------------------------------------
+# Four-stop candy ribbon: mint -> sky -> lilac -> rose
+hyprland_active_border   = "rgba(a8f0dcff) rgba(a2c4ffff) rgba(dcaaffff) rgba(ff9aa9ff) 45deg"
+hyprland_inactive_border = "rgba(20202aaa)"

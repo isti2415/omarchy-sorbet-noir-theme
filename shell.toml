@@ -1,0 +1,139 @@
+# Sorbet Noir — shell surfaces.
+# Compact & glassy: slim bar, ~92% opaque black, mint accent states.
+
+[bar]
+background       = "#000000"
+background-alpha = 0.92
+text             = "#e9e9ef"
+# Modules calling attention to themselves (recording, alerts, updates)
+active           = "#ff9aa9"
+scale-with-font  = true
+size-horizontal  = 26
+size-vertical    = 28
+
+[hyprland]
+active-border            = "rgba(a8f0dcff) rgba(a2c4ffff) rgba(dcaaffff) rgba(ff9aa9ff) 45deg"
+active-border-foreground = "rgba(a8f0dcff) rgba(bed6ffff) rgba(e9c6ffff) rgba(ffb6c2ff) 45deg"
+
+[controls]
+# Idle control chrome — barely-there mint outline on black.
+normal-color        = "#e9e9ef"
+normal-fill-alpha   = 0.04
+normal-border       = "#a8f0dc"
+normal-border-width = 1
+normal-border-alpha = 0.38
+
+# Hover / keyboard cursor — mint lifts and brightens.
+hover-cursor-color        = "#a8f0dc"
+hover-cursor-fill-alpha   = 0.10
+hover-cursor-border       = "#a8f0dc"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 0.55
+
+# Focus mirrors hover so mouse, keyboard cursor and tab focus read alike.
+focus-color        = "#a8f0dc"
+focus-fill-alpha   = 0.10
+focus-border       = "#a8f0dc"
+focus-border-width = 1
+focus-border-alpha = 0.55
+
+# Selected — persistent chosen state, strongest mint fill.
+selected-color        = "#a8f0dc"
+selected-fill-alpha   = 0.18
+selected-border       = "#a8f0dc"
+selected-border-width = 0
+selected-border-alpha = 1.0
+
+pressed-fill-alpha   = 0.26
+selection-fill-alpha = 0.35
+
+[spacing]
+scale = 1.0
+scale-with-font = true
+
+[font]
+base-size = 12
+
+[popups]
+background       = "#000000"
+background-alpha = 0.92
+text             = "#e9e9ef"
+border           = "hyprland.active-border"
+border-alpha     = 1.0
+
+[tooltip]
+background       = "#000000"
+background-alpha = 0.94
+text             = "#e9e9ef"
+border           = "hyprland.active-border-foreground"
+border-alpha     = 0.9
+
+[notifications]
+background       = "#000000"
+background-alpha = 0.92
+text             = "#e9e9ef"
+border           = "hyprland.active-border"
+border-alpha     = 1.0
+countdown        = "#a8f0dc"
+
+[launcher]
+background                = "#000000"
+background-alpha          = 0.92
+text                      = "#e9e9ef"
+border                    = "hyprland.active-border-foreground"
+border-alpha              = 1.0
+scrim                     = "#000000"
+scrim-alpha               = 0.22
+selected-background       = "#a8f0dc"
+selected-background-alpha = 0.14
+selected-text             = "#a8f0dc"
+selected-border           = "hyprland.active-border-foreground"
+selected-border-alpha     = 0.35
+
+[menu]
+background                = "#000000"
+background-alpha          = 0.92
+text                      = "#e9e9ef"
+border                    = "hyprland.active-border-foreground"
+border-alpha              = 1.0
+scrim                     = "#000000"
+scrim-alpha               = 0.22
+selected-background       = "#a8f0dc"
+selected-background-alpha = 0.14
+selected-text             = "#a8f0dc"
+selected-border           = "hyprland.active-border-foreground"
+selected-border-alpha     = 0.35
+
+[polkit]
+background       = "#000000"
+background-alpha = 0.94
+text             = "#e9e9ef"
+text-error       = "#ff9aa9"
+border           = "hyprland.active-border"
+border-error     = "#ff9aa9"
+border-alpha     = 1.0
+scrim            = "#000000"
+scrim-alpha      = 0.22
+accent           = "#a8f0dc"
+
+[lock]
+background       = "#000000"
+background-alpha = 0.85
+text             = "#e9e9ef"
+placeholder      = "#5a6472"
+text-error       = "#ff9aa9"
+border           = "hyprland.active-border"
+border-active    = "hyprland.active-border"
+border-error     = "#ff9aa9"
+border-alpha     = 1.0
+selection        = "#a8f0dc"
+selection-alpha  = 0.45
+
+[image-picker]
+scrim                   = "#000000"
+scrim-alpha             = 0.22
+text                    = "#e9e9ef"
+selected-border         = "#a8f0dc"
+selected-border-alpha   = 1.0
+unselected-border       = "#e9e9ef"
+unselected-border-alpha = 0.22
