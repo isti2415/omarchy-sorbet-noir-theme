@@ -10,6 +10,10 @@ four-stop pastel ribbon (mint → sky → lilac → rose).
 
 ## Install
 
+From the menu: **Install → Style → Theme**, then paste this repository's URL.
+
+Or from a terminal:
+
 ```bash
 omarchy theme install https://github.com/isti2415/omarchy-sorbet-noir-theme
 omarchy theme set sorbet-noir
@@ -19,6 +23,12 @@ Pairs well with:
 
 ```bash
 omarchy font set "CaskaydiaMono Nerd Font"
+```
+
+Optionally style the boot and unlock screen to match:
+
+```bash
+omarchy plymouth set by theme sorbet-noir
 ```
 
 ## Palette
@@ -45,7 +55,10 @@ tone that reads fine on a `#1e1e2e` base becomes unreadable on true black.
 | `shell.toml` | bar, launcher, menus, notifications, tooltips, polkit, lock screen |
 | `icons.theme` | Yaru-sage-dark |
 | `keyboard.rgb` | mint, for supported RGB keyboards |
+| `unlock.png` | mint Omarchy wordmark for the Plymouth boot/unlock screen |
+| `preview-unlock.png` | preview of that unlock screen |
 | `backgrounds/` | four generated AMOLED backgrounds |
+| `preview.png` | marketplace/README preview |
 | `hyprland.lua` | mint bloom + groupbar tint — **see the caveat below** |
 
 Terminals (Alacritty, foot, kitty, Ghostty), Neovim, VS Code, btop, Chromium,
@@ -160,7 +173,21 @@ Cycle backgrounds with `omarchy theme bg next`.
 | solid border, no gradient | `colors.toml` — set `hyprland_active_border = "rgba(a8f0dcff)"` |
 | less see-through popups | `shell.toml` — `background-alpha`, `scrim-alpha` |
 
+## Boot & unlock screen
+
+`unlock.png` is the Omarchy wordmark tinted to the mint accent, which puts this
+theme in `omarchy plymouth list`:
+
+```bash
+omarchy plymouth set by theme sorbet-noir   # apply
+omarchy plymouth reset                      # back to the Omarchy default
+```
+
+![Unlock screen](preview-unlock.png)
+
 ## License
 
 MIT — see [LICENSE](LICENSE). Applies to the theme files and the four generated
-backgrounds. It does not extend to the Wallhaven wallpapers referenced above.
+backgrounds. It does not extend to the Wallhaven wallpapers referenced above,
+nor to the Omarchy wordmark in `unlock.png`, which belongs to the Omarchy
+project and is included per the theming manual's convention.
