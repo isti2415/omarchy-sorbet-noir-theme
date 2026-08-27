@@ -55,7 +55,7 @@ tone that reads fine on a `#1e1e2e` base becomes unreadable on true black.
 | `shell.toml` | bar, launcher, menus, notifications, tooltips, polkit, lock screen |
 | `icons.theme` | Yaru-sage-dark |
 | `keyboard.rgb` | mint, for supported RGB keyboards |
-| `unlock.png` | mint Omarchy wordmark for the Plymouth boot/unlock screen |
+| `unlock.png` | Omarchy wordmark in the pastel gradient, for the Plymouth boot/unlock screen |
 | `preview-unlock.png` | preview of that unlock screen |
 | `backgrounds/` | four generated AMOLED backgrounds |
 | `preview.png` | marketplace/README preview |
@@ -175,8 +175,9 @@ Cycle backgrounds with `omarchy theme bg next`.
 
 ## Boot & unlock screen
 
-`unlock.png` is the Omarchy wordmark tinted to the mint accent, which puts this
-theme in `omarchy plymouth list`:
+`unlock.png` carries the Omarchy wordmark painted with the same pastel sweep as
+the focused-window border — mint → aqua → sky → lilac → rose → peach — which
+puts this theme in `omarchy plymouth list`:
 
 ```bash
 omarchy plymouth set by theme sorbet-noir   # apply
@@ -184,6 +185,22 @@ omarchy plymouth reset                      # back to the Omarchy default
 ```
 
 ![Unlock screen](preview-unlock.png)
+
+Rebuild the wordmark at any time (it repaints a stock theme's wordmark, keeping
+the glyph alpha pixel-for-pixel):
+
+```bash
+python3 tools/make-unlock.py
+omarchy plymouth preview 000000 a8f0dc unlock.png preview-unlock.png
+```
+
+**Why only the wordmark is multicoloured.** `omarchy plymouth set` and
+`omarchy plymouth preview` both run `+level-colors` over `bullet.png`,
+`entry.png` and `lock.png`, flattening each to the single `text-hex` you pass
+them, and `omarchy.script` reuses one `bullet.png` for every password dot. So
+the entry border and dots can only ever be one flat colour — mint here. The
+logo is the one asset that passes through untouched, which is why it carries
+the gradient.
 
 ## License
 
