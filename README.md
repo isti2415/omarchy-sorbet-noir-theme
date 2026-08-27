@@ -194,14 +194,6 @@ python3 tools/make-unlock.py
 omarchy plymouth preview 000000 a8f0dc unlock.png preview-unlock.png
 ```
 
-**Why only the wordmark is multicoloured.** `omarchy plymouth set` and
-`omarchy plymouth preview` both run `+level-colors` over `bullet.png`,
-`entry.png` and `lock.png`, flattening each to the single `text-hex` you pass
-them, and `omarchy.script` reuses one `bullet.png` for every password dot. So
-the entry border and dots can only ever be one flat colour — mint here. The
-logo is the one asset that passes through untouched, which is why it carries
-the gradient.
-
 ## License
 
 MIT — see [LICENSE](LICENSE). Applies to the theme files and the four generated
